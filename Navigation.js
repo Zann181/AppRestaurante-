@@ -10,12 +10,14 @@ import Inicio from "./Pantallas/Inicio"
 import Ordenes from "./Pantallas/Ordenes";
 import Usuarios from "./Pantallas/Usuario"
 import { ScreenStackHeaderSearchBarView } from "react-native-screens";
+import OrdenCrear from "./Pantallas/OrdenCrear";
+import OrdenCurso from "./Pantallas/OrdenCurso";
 
 const HomeStack =createNativeStackNavigator();
 function MyStack(){
     return(
         <HomeStack.Navigator
-        initialRouteName="PantallaInicio">
+        initialRouteName="Ordenes">
             <HomeStack.Screen
                 name="PantallaInicio"
                 component={Inicio}
@@ -24,6 +26,16 @@ function MyStack(){
             <HomeStack.Screen
                 name="Ordenes"
                 component={Ordenes}
+                options={{ headerShown: false }}
+            />
+            <HomeStack.Screen
+                name="OrdenCrear"
+                component={OrdenCrear}
+                options={{ headerShown: false }}
+            />
+            <HomeStack.Screen
+                name="OrdenCurso"
+                component={OrdenCurso}
                 options={{ headerShown: false }}
             />
         </HomeStack.Navigator>
