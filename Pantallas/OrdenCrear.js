@@ -6,7 +6,7 @@ const OrdenCrear = () => {
     
     <View>
       <Text>
-        crar una orden
+        crar una ordeng
       </Text>
     </View>
   )
