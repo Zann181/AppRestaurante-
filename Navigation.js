@@ -12,12 +12,13 @@ import Usuarios from "./Pantallas/Usuario"
 import { ScreenStackHeaderSearchBarView } from "react-native-screens";
 import OrdenCrear from "./Pantallas/OrdenCrear";
 import OrdenCurso from "./Pantallas/OrdenCurso";
+import BodegaCrear from "./Pantallas/BodegaCrear";
 
 const HomeStack =createNativeStackNavigator();
 function MyStack(){
     return(
         <HomeStack.Navigator
-        initialRouteName="Ordenes">
+        initialRouteName="BodegaCrear">
             <HomeStack.Screen
                 name="PantallaInicio"
                 component={Inicio}
@@ -38,6 +39,7 @@ function MyStack(){
                 component={OrdenCurso}
                 options={{ headerShown: false }}
             />
+             <HomeStack.Screen name="BodegaCrear" component={BodegaCrear} />
         </HomeStack.Navigator>
     );
 }
@@ -49,12 +51,14 @@ function MyTabs(){
 
     return(
         <Tab.Navigator
-        initialRouteName="Inicio">
+        initialRouteName="Inicio" 
+        options={{ headerShown: false }}>
             <Tab.Screen name ="Inicio" component={MyStack} />
             <Tab.Screen name ="Ordenes" component={Ordenes} />
             <Tab.Screen name ="Cocina" component={Cocina} />
             <Tab.Screen name ="Bodega" component={Bodega} />
             <Tab.Screen name ="Usuarios" component={Usuarios} />
+            <Tab.Screen name ="BodegaCrear" component={BodegaCrear}/>
         </Tab.Navigator>
     );
 }
