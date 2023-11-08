@@ -13,33 +13,20 @@ import { ScreenStackHeaderSearchBarView } from "react-native-screens";
 import OrdenCrear from "./Pantallas/OrdenCrear";
 import OrdenCurso from "./Pantallas/OrdenCurso";
 import BodegaCrear from "./Pantallas/BodegaCrear";
+import BodegaActual from "./Pantallas/BodegaActual"
 
 const HomeStack =createNativeStackNavigator();
 function MyStack(){
     return(
         <HomeStack.Navigator
-        initialRouteName="BodegaCrear">
-            <HomeStack.Screen
-                name="PantallaInicio"
-                component={Inicio}
-                options={{ headerShown: false }}
-            />
-            <HomeStack.Screen
-                name="Ordenes"
-                component={Ordenes}
-                options={{ headerShown: false }}
-            />
-            <HomeStack.Screen
-                name="OrdenCrear"
-                component={OrdenCrear}
-                options={{ headerShown: false }}
-            />
-            <HomeStack.Screen
-                name="OrdenCurso"
-                component={OrdenCurso}
-                options={{ headerShown: false }}
-            />
-             <HomeStack.Screen name="BodegaCrear" component={BodegaCrear} />
+        initialRouteName="PantallaInicio">
+            <HomeStack.Screen name="PantallaInicio" component={Inicio}       options={{ headerShown: false }} />
+            <HomeStack.Screen name="Ordenes"        component={Ordenes}      options={{ headerShown: false }} />
+            <HomeStack.Screen name="OrdenCrear"     component={OrdenCrear}   options={{ headerShown: false }} />
+            <HomeStack.Screen name="OrdenCurso"     component={OrdenCurso}   options={{ headerShown: false }} />
+            <HomeStack.Screen name="Bodega"         component={Bodega}       options={{ headerShown: false }} />
+            <HomeStack.Screen name="BodegaCrear"    component={BodegaCrear}  options={{ headerShown: false }} />
+            <HomeStack.Screen name="BodegaActual"   component={BodegaActual} options={{ headerShown: false }} />
         </HomeStack.Navigator>
     );
 }

@@ -1,15 +1,35 @@
-import { StyleSheet, Text, View } from 'react-native'
-import axios from 'axios'
-import React from 'react'
+import React from 'react';
+import { StyleSheet, View, Button } from 'react-native';
 
-const Bodega = () => {
+const Bodega = ({ navigation }) => {
+  const handleBodegaCrearPress = () => {
+    navigation.navigate('BodegaCrear');
+  };
+
+  const handleBodegaActualPress = () => {
+    navigation.navigate('BodegaActual');
+  };
+
   return (
-    <View>
-      <Text>Bodega</Text>
+    <View style={styles.container}>
+      <Button
+        title="Crear Bodega"
+        onPress={handleBodegaCrearPress}
+      />
+      <Button
+        title="Ver Bodegas"
+        onPress={handleBodegaActualPress}
+      />
     </View>
-  )
-}
+  );
+};
 
-export default Bodega
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
-const styles = StyleSheet.create({})
+export default Bodega;
