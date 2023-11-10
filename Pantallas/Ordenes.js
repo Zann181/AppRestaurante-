@@ -14,7 +14,14 @@ const Ordenes = () => {
       <Button title= "Ordenes en curso" 
       onPress={()=>navigation.navigate('OrdenCurso')}
       />
+
+      <Button title= "Actualizar Orden" 
+      onPress={()=>navigation.navigate('OrdenActualizar')}
+      />
+
     </View>
+
+    
   )
 }
 

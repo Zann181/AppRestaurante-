@@ -18,7 +18,7 @@ import OrdenCrear from "./Pantallas/OrdenCrear";
 import OrdenActualizar from "./Pantallas/OrdenActualizar";
 
 import Productos from "./Pantallas/Productos";
-import Registradora from "./Pantallas/Registradora";
+import ProductosCrear from "./Pantallas/ProductosCrear";
 import ProductosVer from "./Pantallas/ProductosVer";
 import ProductosActualizar from "./Pantallas/ProductosActualizar";
 
@@ -36,7 +36,7 @@ function MyStack(){
             <HomeStack.Screen name="OrdenActualizar" component={OrdenActualizar}       options={{ headerShown: false }} />
 
             <HomeStack.Screen name="Productos"         component={Productos}       options={{ headerShown: false }} />
-            <HomeStack.Screen name="Registradora"    component={Registradora}  options={{ headerShown: false }} />
+            <HomeStack.Screen name="ProductosCrear"    component={ProductosCrear}  options={{ headerShown: false }} />
             <HomeStack.Screen name="ProductosActualizar"   component={ProductosActualizar} options={{ headerShown: false }} />
             <HomeStack.Screen name="ProducstoVer" component={ProductosVer}       options={{ headerShown: false }} />
 
