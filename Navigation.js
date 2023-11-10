@@ -10,7 +10,7 @@ import FacturaActualizar from "./Pantallas/FacturaActualizar";
 import FacturaCrear from "./Pantallas/FacturaCrear";
 import FacturaVer from "./Pantallas/FacturaVer";
 
-import MesaVer from "./PantallasMesaVer";
+import MesaVer from "./Pantallas/MesaVer";
 
 import Ordenes from "./Pantallas/Ordenes";
 import OrdenCurso from "./Pantallas/OrdenCurso";
@@ -60,7 +60,8 @@ function MyTabs(){
 
     return(
         <Tab.Navigator
-        options={{ headerShown: false }}>
+        options={{ headerShown: false }}
+        initialRouteName="Ordenes">
             
             <Tab.Screen name ="Ordenes" component={Ordenes} />
             <Tab.Screen name ="Productos" component={Productos} />

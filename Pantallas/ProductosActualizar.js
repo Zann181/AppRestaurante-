@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button } from 'react-native';
-import Request from './peticiones.js';
+import Request from '../funcional/Peticiones.js';
 
 const ProductosActualizar = () => {
   const [producto, setproducto] = useState({
