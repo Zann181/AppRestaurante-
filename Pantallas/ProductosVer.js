@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import axios from 'axios';
 
-const OrdenCurso = () => {
-    const [orders, setOrders] = useState([]);
+const ProductosVer = () => {
+    const [products, setproducts] = useState([]);
 
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/api/orders')
+        axios.get('http://127.0.0.1:8000/api/products')
             .then(response => {
-                setOrders(response.data);
+                setproducts(response.data);
             })
             .catch(error => {
                 console.error(error);
@@ -18,19 +18,18 @@ const OrdenCurso = () => {
     const renderOrder = ({ item }) => (
         <View style={styles.order}>
             <Text style={styles.tabletext}>{item.id}</Text>
-            <Text style={styles.tabletext}>{item.data}</Text>
-            <Text style={styles.tabletext}>{item.order_confirmation}</Text>
-            <Text style={styles.tabletext}>{item.id_product}</Text>
+            <Text style={styles.tabletext}>{item.name}</Text>
             <Text style={styles.tabletext}>{item.units}</Text>
-            <Text style={styles.tabletext}>{item.id_table}</Text>
+            <Text style={styles.tabletext}>{item.price}</Text>
+           
         </View>
     );
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Orders</Text>
+            <Text style={styles.title}>products</Text>
             <FlatList
-                data={orders}
+                data={products}
                 renderItem={renderOrder}
                 keyExtractor={item => item.id}
             />
@@ -60,4 +59,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default OrdenCurso;
+export default ProductosVer;

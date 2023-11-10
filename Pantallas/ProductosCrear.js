@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 
-export default function BodegaCrear() {
+export default function ProductosCrear() {
   const [name, setName] = useState("");
   const [units, setUnits] = useState(0);
   const [price, setPrice] = useState(0);
